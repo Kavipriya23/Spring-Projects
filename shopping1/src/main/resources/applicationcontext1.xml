@@ -4,6 +4,8 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+                    <!-- Constructor Injection -->
+    
     <bean id="battery" class="com.mphasis.shopping1.Battery">
         <constructor-arg value="B001"/>
         <constructor-arg value="Rechargeable Battery"/>
