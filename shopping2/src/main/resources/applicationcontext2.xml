@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+    <property name="location" value="classpath:discounts.properties"/>
+</bean>
+
+ <bean id="product" class="com.mphasis.shopping2.Product">
+   <property name="discount" value="${specialCustomerDiscount}"/>
+ </bean>
+        
+<bean id="battery" class="com.mphasis.shopping2.Battery">
+  <property name="discount" value="${summerDiscount}"/>
+</bean>
+
+<bean id="disc" class="com.mphasis.shopping2.Disc">
+   <property name="discount" value="${endOfYearDiscount}"/>
+</bean>  
+</beans>
