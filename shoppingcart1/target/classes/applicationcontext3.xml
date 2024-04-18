@@ -1,0 +1,26 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define Product bean -->
+    <bean id="product1" class="com.mphasis.shoppingcart1.Product">
+        <constructor-arg value="1" />
+        <constructor-arg value="Laptop" />
+        <constructor-arg value="400000.0" />
+    </bean>
+    <bean id="product2" class="com.mphasis.shoppingcart1.Product">
+        <constructor-arg value="2" />
+        <constructor-arg value="Mobile" />
+        <constructor-arg value="11000.0" />
+    </bean>
+    <bean id="product3" class="com.mphasis.shoppingcart1.Product">
+        <constructor-arg value="3" />
+        <constructor-arg value="Toy" />
+        <constructor-arg value="110.0" />
+    </bean>
+
+  <!-- Define ShoppingCart bean with prototype scope -->
+    <bean id="shoppingCart" class="com.mphasis.shoppingcart1.Shoppingcart" scope="prototype" />
+</beans>
+
